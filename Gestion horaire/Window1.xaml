@@ -1,0 +1,34 @@
+﻿<Window x:Class="Gestion_horaire.SelectUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sélection des utilisateurs" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Sélectionnez les utilisateurs:" Margin="10"/>
+        <ListBox x:Name="UsersListBox" Grid.Column="1" Margin="10">
+            <ListBoxItem Content="Utilisateur 1"/>
+            <ListBoxItem Content="Utilisateur 2"/>
+            <ListBoxItem Content="Utilisateur 3"/>
+            <ListBoxItem Content="Utilisateur 4"/>
+            <ListBoxItem Content="Utilisateur 5"/>
+        </ListBox>
+        <TextBlock Text="Durée de la rencontre:" Grid.Row="1" Margin="10"/>
+        <ComboBox x:Name="DurationComboBox" SelectedIndex="0" Grid.Column="1" Grid.Row="1" Margin="10">
+            <ComboBoxItem Content="30 min"/>
+            <ComboBoxItem Content="60 min"/>
+            <ComboBoxItem Content="90 min"/>
+            <ComboBoxItem Content="120 min"/>
+        </ComboBox>
+        <Button x:Name="FindAvailabilityButton" Content="Trouver disponibilité" Grid.Row="3" Margin="10" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>
